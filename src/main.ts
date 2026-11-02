@@ -18,12 +18,15 @@ async function loadCourses(): Promise<ICourse[]> {
   return response.json();
 }
 
+
+
 // ---------------------------------------------------------------
 // renderCatalog
 // PARÁMETRO: list: Course[] -> el array de cursos que se va a pintar
 // RETORNO: void -> no devuelve nada, solo modifica la página
 // ---------------------------------------------------------------
-function renderCatalog(list: Course[]): void {
+// highlight: texto buscado que se resaltará en los títulos (opcional)
+function renderCatalog(list: Course[], highlight: string = ""): void {
   try {
     const catalog: HTMLElement | null = document.getElementById("catalog");
 
@@ -41,7 +44,7 @@ function renderCatalog(list: Course[]): void {
     // PARÁMETRO de la flecha: course: Course -> cada curso del array
     // RETORNO de la flecha: void -> no devuelve nada
     list.forEach((course: Course): void => {
-      catalog.innerHTML += course.render();
+      catalog.innerHTML += course.render(highlight);
     });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : String(error);
@@ -86,7 +89,7 @@ function applyFilters(): void {
     levelSelect.value as Level | "All",
     searchInput.value
   );
-  renderCatalog(filtered);
+  renderCatalog(filtered, searchInput.value);
 }
 
 // Registro de manejadores
