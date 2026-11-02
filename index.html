@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAP Course Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="dist/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">SAP Course Catalog</div>
+
+      <nav>
+        <a href="#catalogo">Catalogo</a>
+        <a href="#mis-cursos">Mis cursos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Catálogo de Cursos SAP</h1>
+
+      <!-- Filtros: sin <form>, así no hay envío ni recarga -->
+      <div class="filters">
+        <input type="text" id="search" placeholder="Buscar por titulo..." />
+        <select id="level-filter">
+          <option value="All">All</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+
+      <!-- Contenedor donde se mostrarán las tarjetas -->
+      <div id="catalog"> </div>
+      
+    </main>
+
+    <!-- Footer con el nombre de la empresa y el año actual -->
+    <footer>
+      <p>&copy; <span id="year">2026</span> SAP Course Catalog</p>
+    </footer>
+  </body>
+</html>

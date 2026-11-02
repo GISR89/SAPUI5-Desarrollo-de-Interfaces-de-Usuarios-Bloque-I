@@ -1,0 +1,190 @@
+/* styles.css - Estilos de SAP Course Catalog */
+
+/* Reseteo de márgenes y box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #1d2d3e;
+  line-height: 1.6;
+  min-height: 100vh;        /*  footer al fondo */
+  display: flex;            /*  footer al fondo */
+  flex-direction: column;   /*  footer al fondo */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1d2d3e;
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Navegación horizontal */
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #5bb7f5;
+  text-decoration: underline;
+}
+
+/* Contenido principal */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;                  /* footer al fondo */
+}
+
+/* Zona de filtros */
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.filters input,
+.filters select {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #c5ceda;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #1d2d3e;
+}
+
+.filters input {
+  flex: 1;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #0a6ed1;
+  box-shadow: 0 0 0 3px rgba(10, 110, 209, 0.2);
+}
+
+/* Contenedor del catálogo: grid adaptable */
+#catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Tarjeta de curso */
+.course-card {
+  background-color: #ffffff;
+  border: 1px solid #e1e6ee;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.course-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.course-card .level,
+.course-card .duration {
+  font-size: 0.9rem;
+  color: #5a6b7d;
+}
+
+.course-card .description {
+  margin-top: 0.75rem;
+}
+
+/* Niveles de dificultad */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.badge.beginner {
+  background-color: #2e9e4f;   /* verde */
+}
+
+.badge.intermediate {
+  background-color: #e8830c;   /* naranja */
+}
+
+.badge.advanced {
+  background-color: #d93636;   /* rojo */
+}
+
+/* Footer */
+footer {
+  background-color: #1d2d3e;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+}
+
+/* ===== Responsive (siempre al final) ===== */
+
+/* Tablet: 2 columnas */
+@media (max-width: 900px) {
+  #catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil: 1 columna */
+@media (max-width: 600px) {
+  #catalog {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Filtros en una columna en móvil */
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+  }
+}
+
+.loading,
+.error,
+.empty-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #5a6b7d;
+  padding: 2rem;
+}
+
+.error {
+  color: #d93636;
+}

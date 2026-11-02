@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Introduction to SAP BTP",
+    "level": "Beginner",
+    "duration": 8,
+    "description": "Conoce los fundamentos de SAP Business Technology Platform y sus principales servicios."
+  },
+  {
+    "title": "SAP Fiori Basics",
+    "level": "Beginner",
+    "duration": 10,
+    "description": "Aprende los principios de diseño y la experiencia de usuario de SAP Fiori."
+  },
+  {
+    "title": "SAP Build Apps for Citizen Developers",
+    "level": "Beginner",
+    "duration": 12,
+    "description": "Crea aplicaciones sin código con SAP Build Apps y publícalas en tu entorno."
+  },
+  {
+    "title": "SAP Integration Suite in Practice",
+    "level": "Intermediate",
+    "duration": 16,
+    "description": "Diseña e implementa flujos de integración entre sistemas SAP y no SAP."
+  },
+  {
+    "title": "ABAP RESTful Application Programming",
+    "level": "Intermediate",
+    "duration": 20,
+    "description": "Desarrolla servicios y aplicaciones modernas con el modelo RAP en ABAP Cloud."
+  },
+  {
+    "title": "SAP Build Process Automation",
+    "level": "Intermediate",
+    "duration": 14,
+    "description": "Automatiza procesos de negocio combinando flujos de trabajo, formularios y bots de RPA."
+  },
+  {
+    "title": "Advanced CAP Development",
+    "level": "Advanced",
+    "duration": 24,
+    "description": "Desarrolla aplicaciones empresariales con SAP Cloud Application Programming Model, desde el modelo de datos hasta el despliegue."
+  },
+  {
+    "title": "SAP BTP Security and Identity Management",
+    "level": "Advanced",
+    "duration": 30,
+    "description": "Configura autenticación, autorización y gestión de roles en aplicaciones desplegadas en BTP."
+  }
+]
